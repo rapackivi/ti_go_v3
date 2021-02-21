@@ -12,5 +12,8 @@
     "remind"
   ],
   "author": "Alexey Semenihin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
