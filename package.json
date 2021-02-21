@@ -1,0 +1,16 @@
+{
+  "name": "ti_go_v3",
+  "version": "1.0.0",
+  "description": "\"time go\" project is for reminder about special dates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "time",
+    "measure",
+    "remind"
+  ],
+  "author": "Alexey Semenihin",
+  "license": "ISC"
+}
