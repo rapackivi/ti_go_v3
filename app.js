@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 //logging of api requests
 app.use(require('morgan')("dev"))
-//cors is for get api request from frondend 
+//cors is for get api request from frontend 
 app.use(require('cors')())
 //connect static
 app.use('/uploads', express.static('./server/uploads'))
