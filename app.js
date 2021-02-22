@@ -4,7 +4,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const path = require('path')
 
-mongoose.connect(require('./config/keys').mongoURI, 
+mongoose.connect(require('./server/config/keys').mongoURI, 
   {
     useNewUrlParser: true, 
     useUnifiedTopology: true,
@@ -12,7 +12,7 @@ mongoose.connect(require('./config/keys').mongoURI,
     useCreateIndex: true  
   }, (err) => console.log(err||"DB connect!"));
 const app = express();
-require('./middleware/passport')(passport);
+require('./server/middleware/passport')(passport);
 //using passport for authentificate
 app.use(passport.initialize());
 
