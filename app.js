@@ -28,6 +28,17 @@ app.use(require('cors')())
 app.use('/uploads', express.static('./server/uploads'))
 //add all routes
 app.use("/api/auth", require('./server/routes/auth'));
+app.use("/api/user", require('./server/routes/userpage'))
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile'] }));
+
+app.get('/auth/google/time-go', 
+  passport.authenticate('google', { failureRedirect: '/api/auth/login', session: false }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/api/user/userpage');
+});
+
 // app.use("/api/analytics", require('./server/routes/analytics'));
 // app.use("/api/category", require('./server/routes/category'));
 // app.use("/api/position", require('./server/routes/position'));

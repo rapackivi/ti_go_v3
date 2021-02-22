@@ -28,3 +28,4 @@ module.exports.registration = (req, res) => {
   })
   .catch(e => errorHandler(res, e))
 }
+
