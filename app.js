@@ -22,15 +22,16 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 //logging of api requests
 app.use(require('morgan')("dev"))
+//cors is for get api request from frondend 
 app.use(require('cors')())
 //connect static
-app.use('/uploads', express.static('uploads'))
+app.use('/uploads', express.static('./server/uploads'))
 //add all routes
-app.use("/api/auth", require('./routes/auth'));
-app.use("/api/analytics", require('./routes/analytics'));
-app.use("/api/category", require('./routes/category'));
-app.use("/api/position", require('./routes/position'));
-app.use("/api/order", require('./routes/order'));
+app.use("/api/auth", require('./server/routes/auth'));
+// app.use("/api/analytics", require('./server/routes/analytics'));
+// app.use("/api/category", require('./server/routes/category'));
+// app.use("/api/position", require('./server/routes/position'));
+// app.use("/api/order", require('./server/routes/order'));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/dist/client'))
