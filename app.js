@@ -34,6 +34,7 @@ app.get('/auth/google',
 
 app.get('/auth/google/time-go', 
   passport.authenticate('google', { failureRedirect: '/api/auth/login', session: false }),
+  
   function(req, res) {
     // Successful authentication, redirect home.
     res.redirect('/api/user/userpage');
