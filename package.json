@@ -16,6 +16,7 @@
   "author": "Alexey Semenihin",
   "license": "ISC",
   "dependencies": {
+    "@angular/cli": "^11.2.3",
     "@mapbox/node-pre-gyp": "^1.0.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
